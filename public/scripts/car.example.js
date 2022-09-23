@@ -1,3 +1,4 @@
+
 class Car {
   static list = [];
 
@@ -41,12 +42,29 @@ class Car {
 
   render() {
     return `
-      <p>id: <b>${this.id}</b></p>
-      <p>plate: <b>${this.plate}</b></p>
-      <p>manufacture: <b>${this.manufacture}</b></p>
-      <p>model: <b>${this.model}</b></p>
-      <p>available at: <b>${this.availableAt}</b></p>
-      <img src="${this.image}" alt="${this.manufacture}" width="64px">
+      
+            <div class="card" style="display: flex;">
+                <img class="card-img-top img-fluid" style="width: auto; height:250px;" src="${this.image}" alt="${this.manufacture}">
+                <div class="card-block px-3">
+                <div class="container-text" style="margin:10px;">
+                    <h4 class="card-title">Model Car: ${this.model}</h4>
+                    <h4>Rp. ${this.rentPerDay}/day</h4>
+                   
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada pellentesque mi eu facilisis. Ut lacus velit, rhoncus eu sodales aliquam, commodo finibus urna. </p>
+                      <p class="card-text">&#xf500; Capacity: ${this.capacity}</p>
+                      <p class="card-text">&#xf013; Transmission: ${this.transmission}</p>
+                      <p class="card-text">&#xf073; Year: ${this.year}</p>
+                      <p class="card-text">&#xf017; Available Time: ${this.availableAt}</p>
+                    <div class="row pb-4">
+                      <div class="col text-center">
+                        <button class="btn btn-success" style="padding-right: 100px!important;padding-left: 100px!important;">Pilih Mobil</button>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+     
     `;
   }
 }

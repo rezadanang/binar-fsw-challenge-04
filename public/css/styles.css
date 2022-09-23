@@ -1,11 +1,11 @@
 html, body{
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif,'FontAwesome';
     overflow-x: hidden;
     margin: auto;
     width: 100%;
 }
 
-.btn{
+.btn-success{
     background-color: #5CB85F;
     border-color: #5CB85F;
 }
@@ -187,6 +187,32 @@ a:hover{
     background: #0D28A6;
 }
 /* AKHIR FOOTER */
+
+
+/* ALERT FIELDS KOSONG */
+ /* .danger{
+    font-size: 20px;
+    color: red;
+    display: none;
+} */
+/* small {
+    color: #e75c3c;
+    margin-top: 5px;
+    visibility: hidden;
+  }
+
+  .form-control.error small {
+    visibility: visible;
+  }
+  
+  .form-control.error input {
+    border-color: #e75c3c;
+  }
+  
+  .form-control.success input {
+    border-color: #2ecc71;
+  }
+   */
 
 /* RESPONSIVE */
 

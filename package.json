@@ -7,6 +7,10 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "mime": "^3.0.0"
   }
 }
