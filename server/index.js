@@ -51,7 +51,7 @@ http.createServer(function (req, res) {
       // if the file is not found, return 404
      
       res.statusCode = 404;
-      res.end("ERROR 404 NOT FOUND");
+      res.end(`<h1>ERROR 404, file ${pathname} NOT FOUND</h1>`);
       
       return;
 
@@ -64,7 +64,7 @@ http.createServer(function (req, res) {
     fs.readFile(absolutePath, function(err, data){
       if(err){
         res.statusCode = 500;
-        res.end(`Error getting the file: ${err}.`);
+        res.end(`<h1>Error getting the file: ${err}.</h1>`);
       } else {
         // if the file is found, set Content-type and send data
         res.setHeader('Content-type', map[ext] || 'text/plain' );
