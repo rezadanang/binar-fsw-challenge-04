@@ -21,22 +21,22 @@ class App {
     const dateValue = this.filterbyDate.value;
     const timeValue = this.filterbyTime.value;
     const capacityValue = this.filterbyCapacity.value;
-    
     const newDateTime = new Date(`${dateValue} ${timeValue}`);
     const epochTime = newDateTime.getTime();
     
-    console.log(dateValue, timeValue, capacityValue, newDateTime, epochTime);
-    this.load(epochTime, capacityValue);
-    // if( dateValue === '' ||  timeValue === '' || capacityValue === ''){
-    //   const messageError = document.createElement('p');
-    //   messageError.innerHTML = "harap diisi"
-    //   console.log('kosong');
-    // }
+    // console.log(dateValue, timeValue, capacityValue, newDateTime, epochTime);
+    if( dateValue === '' ||  timeValue === '' || capacityValue === ''){ 
+      document.getElementById("errorMsg").innerHTML = "Lengkapi form input!";  
+      document.getElementById("errorMsg").style.display = "block";
+    } else{
+      this.load(epochTime, capacityValue);
+    document.getElementById("errorMsg").style.display = "none";
+    }
+    
   };
 
   async load(dateFilter, capacityFilter) {
     const cars = await Binar.listCars(item => item.capacity >= capacityFilter && (item.availableAt >= dateFilter));
-    
     console.log('cars:', cars)
     Car.init(cars);
     Car.list.forEach((car) => {

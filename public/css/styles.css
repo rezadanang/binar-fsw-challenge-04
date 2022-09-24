@@ -263,6 +263,15 @@ a:hover{
             text-align: center;
         }
 
+        /* FILTER FORM */
+        .container-form{
+            width:auto;
+        }
+
+        .btn-filter-car{
+            margin: 0px!important;
+            margin-bottom: 0px!important;
+        }
         /* OUR SERVICES */
 
         
